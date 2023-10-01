@@ -191,7 +191,7 @@ class People {
 
 // RESULTS!
 const players = new People();
-players.toString(); // result: null
+players.toString(); // null
 
 players.append("Harry Kane");
 players.append("Jeremy Doku");
@@ -199,27 +199,27 @@ players.append("Leroy Sane");
 players.append("Kyle Walker");
 players.append("Erling Haaland");
 
-players.toString(); // result: (Harry Kane) -> (Jeremy Doku) -> (Leroy Sane) -> (Kyle Walker) -> (Erling Haaland) -> null
+players.toString(); // (Harry Kane) -> (Jeremy Doku) -> (Leroy Sane) -> (Kyle Walker) -> (Erling Haaland) -> null
 
-console.log(players.listSize()); // result: 5
+console.log(players.listSize()); // 5
 players.prepend("Kevin De Bruyne");
-players.toString(); // result: (Kevin De Bruyne) -> (Harry Kane) -> (Jeremy Doku) -> (Leroy Sane) -> (Kyle Walker) -> (Erling Haaland) -> null
+players.toString(); // (Kevin De Bruyne) -> (Harry Kane) -> (Jeremy Doku) -> (Leroy Sane) -> (Kyle Walker) -> (Erling Haaland) -> null
 
 players.pop();
-players.toString(); // result: (Kevin De Bruyne) -> (Harry Kane) -> (Jeremy Doku) -> (Leroy Sane) -> (Kyle Walker) -> null
+players.toString(); // (Kevin De Bruyne) -> (Harry Kane) -> (Jeremy Doku) -> (Leroy Sane) -> (Kyle Walker) -> null
 
-console.log(players.at(2)); // result: Node { name: 'Jeremy Doku', next: Node}
-console.log(players.contains("Kevin De Bruyne")); // result: true
-console.log(players.find("Kevin De Bruyne")); // result: 0
-console.log(players.headNode()); // result: Node { name: 'Kevin De Bruyne', next: Node}
-console.log(players.tailNode()); // result: Node { name: 'Kyle Walker', next: Node}
+console.log(players.at(2)); // Node { name: 'Jeremy Doku', next: Node}
+console.log(players.contains("Kevin De Bruyne")); // true
+console.log(players.find("Kevin De Bruyne")); // 0
+console.log(players.headNode()); // Node { name: 'Kevin De Bruyne', next: Node}
+console.log(players.tailNode()); // Node { name: 'Kyle Walker', next: Node}
 
 players.insertAt("John Stones", 2);
-players.toString(); // result: (Kevin De Bruyne) -> (Harry Kane) -> (John Stones) -> (Jeremy Doku) -> (Leroy Sane) -> (Kyle Walker) -> null
+players.toString(); // (Kevin De Bruyne) -> (Harry Kane) -> (John Stones) -> (Jeremy Doku) -> (Leroy Sane) -> (Kyle Walker) -> null
 players.insertAt("Rodri", 0);
-players.toString(); // result: (Rodri) -> (Kevin De Bruyne) -> (Harry Kane) -> (John Stones) -> (Jeremy Doku) -> (Leroy Sane) -> (Kyle Walker) -> null
+players.toString(); // (Rodri) -> (Kevin De Bruyne) -> (Harry Kane) -> (John Stones) -> (Jeremy Doku) -> (Leroy Sane) -> (Kyle Walker) -> null
 
 players.removeAt(2);
-players.toString(); // result: (Rodri) -> (Kevin De Bruyne) -> (John Stones) -> (Jeremy Doku) -> (Leroy Sane) -> (Kyle Walker) -> null
+players.toString(); // (Rodri) -> (Kevin De Bruyne) -> (John Stones) -> (Jeremy Doku) -> (Leroy Sane) -> (Kyle Walker) -> null
 players.removeAt(0);
-players.toString(); // result: (Kevin De Bruyne) -> (John Stones) -> (Jeremy Doku) -> (Leroy Sane) -> (Kyle Walker) -> null
+players.toString(); // (Kevin De Bruyne) -> (John Stones) -> (Jeremy Doku) -> (Leroy Sane) -> (Kyle Walker) -> null
